@@ -59,7 +59,8 @@ export const org = {
   shiningOneGathering: "https://praythebay.org/gathering",
   seekWeekGuide: "https://praythebay.org/s/SEEK-WEEK-GUIDE.pdf",
   experienceChurch: "https://exp.church/",
-  prayerMapEmbed: "https://www.google.com/maps/d/embed?mid=1ElRwwmtKa_CMIsm0D7JOiOh_b2v8Nfw",
+  prayerMapEmbed: "https://www.google.com/maps/d/embed?mid=1qvHflVdFx73AlNeMwH-Qu7TR5NetaT4&ehbc=2E312F&noprof=1",
+  prayerMapRegister: "https://praythebay.org/map#register",
 };
 
 export type NavGroup = { label: string; items: { label: string; to: string }[] };
