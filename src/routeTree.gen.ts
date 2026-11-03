@@ -11,7 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as DwellingPlaceRouteImport } from './routes/dwelling-place'
 import { Route as PrayWithUsRouteImport } from './routes/pray-with-us'
+import { Route as Renaissance27RouteImport } from './routes/renaissance-27'
+import { Route as SeekWeek2026RouteImport } from './routes/seek-week-2026'
+import { Route as ServeWithUsRouteImport } from './routes/serve-with-us'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as VisionRouteImport } from './routes/vision'
 
@@ -25,9 +29,29 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DwellingPlaceRoute = DwellingPlaceRouteImport.update({
+  id: '/dwelling-place',
+  path: '/dwelling-place',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrayWithUsRoute = PrayWithUsRouteImport.update({
   id: '/pray-with-us',
   path: '/pray-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Renaissance27Route = Renaissance27RouteImport.update({
+  id: '/renaissance-27',
+  path: '/renaissance-27',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeekWeek2026Route = SeekWeek2026RouteImport.update({
+  id: '/seek-week-2026',
+  path: '/seek-week-2026',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServeWithUsRoute = ServeWithUsRouteImport.update({
+  id: '/serve-with-us',
+  path: '/serve-with-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TeamRoute = TeamRouteImport.update({
@@ -44,14 +68,22 @@ const VisionRoute = VisionRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
   '/pray-with-us': typeof PrayWithUsRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
   '/team': typeof TeamRoute
   '/vision': typeof VisionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
   '/pray-with-us': typeof PrayWithUsRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
   '/team': typeof TeamRoute
   '/vision': typeof VisionRoute
 }
@@ -59,22 +91,58 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
   '/pray-with-us': typeof PrayWithUsRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
   '/team': typeof TeamRoute
   '/vision': typeof VisionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/pray-with-us' | '/team' | '/vision'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/dwelling-place'
+    | '/pray-with-us'
+    | '/renaissance-27'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/team'
+    | '/vision'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/pray-with-us' | '/team' | '/vision'
-  id: '__root__' | '/' | '/about' | '/pray-with-us' | '/team' | '/vision'
+  to:
+    | '/'
+    | '/about'
+    | '/dwelling-place'
+    | '/pray-with-us'
+    | '/renaissance-27'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/team'
+    | '/vision'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/dwelling-place'
+    | '/pray-with-us'
+    | '/renaissance-27'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/team'
+    | '/vision'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  DwellingPlaceRoute: typeof DwellingPlaceRoute
   PrayWithUsRoute: typeof PrayWithUsRoute
+  Renaissance27Route: typeof Renaissance27Route
+  SeekWeek2026Route: typeof SeekWeek2026Route
+  ServeWithUsRoute: typeof ServeWithUsRoute
   TeamRoute: typeof TeamRoute
   VisionRoute: typeof VisionRoute
 }
@@ -95,11 +163,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dwelling-place': {
+      id: '/dwelling-place'
+      path: '/dwelling-place'
+      fullPath: '/dwelling-place'
+      preLoaderRoute: typeof DwellingPlaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pray-with-us': {
       id: '/pray-with-us'
       path: '/pray-with-us'
       fullPath: '/pray-with-us'
       preLoaderRoute: typeof PrayWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/renaissance-27': {
+      id: '/renaissance-27'
+      path: '/renaissance-27'
+      fullPath: '/renaissance-27'
+      preLoaderRoute: typeof Renaissance27RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seek-week-2026': {
+      id: '/seek-week-2026'
+      path: '/seek-week-2026'
+      fullPath: '/seek-week-2026'
+      preLoaderRoute: typeof SeekWeek2026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/serve-with-us': {
+      id: '/serve-with-us'
+      path: '/serve-with-us'
+      fullPath: '/serve-with-us'
+      preLoaderRoute: typeof ServeWithUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/team': {
@@ -122,7 +218,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  DwellingPlaceRoute: DwellingPlaceRoute,
   PrayWithUsRoute: PrayWithUsRoute,
+  Renaissance27Route: Renaissance27Route,
+  SeekWeek2026Route: SeekWeek2026Route,
+  ServeWithUsRoute: ServeWithUsRoute,
   TeamRoute: TeamRoute,
   VisionRoute: VisionRoute,
 }
