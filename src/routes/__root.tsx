@@ -4,12 +4,10 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  useRouterState,
   HeadContent,
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
@@ -114,8 +112,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const reduce = useReducedMotion();
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -124,15 +120,9 @@ function RootComponent() {
         Skip to content
       </a>
       <Header />
-      <motion.main
-        id="main"
-        key={pathname}
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
+      <main id="main">
         <Outlet />
-      </motion.main>
+      </main>
       <Footer />
     </QueryClientProvider>
   );
