@@ -19,7 +19,7 @@ function Plant() {
     ["How to plant prayer", "Where to start — a simple guide to beginning a prayer group.", org.plantPrayerHowTo, "View Resource"],
     ["Register your prayer group", "Add your group to our directory so others can find and join.", org.plantPrayerRegister, "Register Now"],
     ["View all groups", "Find a prayer group near you anywhere in the Bay.", org.plantPrayerGroups, "View Now"],
-  ];
+  ] as const;
   return (
     <>
       <TypeHero

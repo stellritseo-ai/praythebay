@@ -99,7 +99,7 @@ function Hero() {
           </div>
         </motion.div>
       </motion.div>
-      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-ivory/60" aria-hidden>
+      <div className="absolute bottom-6 left-1/2 hidden md:flex -translate-x-1/2 flex-col items-center gap-2 text-ivory/60" aria-hidden>
         <span className="eyebrow text-[0.6rem]">Scroll</span>
         <span className="relative h-10 w-px overflow-hidden bg-ivory/20">
           <span className="scroll-cue absolute inset-x-0 top-0 h-1/2 bg-ivory" />
@@ -153,14 +153,14 @@ function Vision() {
             onMouseEnter={() => setActive(i)}
             onFocus={() => setActive(i)}
             onClick={() => setActive(i)}
-            className={`group relative h-[60svh] overflow-hidden text-left transition-[flex] duration-[1200ms] ease-[var(--ease-cinema)] lg:h-auto ${active === i ? "lg:flex-[2.4]" : "lg:flex-1"}`}
+            className={`group relative h-[60svh] min-w-0 overflow-hidden text-left transition-[flex] duration-[1200ms] ease-[var(--ease-cinema)] lg:h-auto ${active === i ? "lg:flex-[2.4]" : "lg:flex-1"}`}
           >
             <Photo src={p.photo} alt={p.alt} className={`img-zoom ${active === i ? "scale-105" : "scale-100 grayscale-[40%]"}`} />
             <div className="overlay-bottom absolute inset-0" />
             <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10">
               <span className="eyebrow text-sky">{p.n}</span>
               <div>
-                <h3 className="font-display text-5xl uppercase tracking-wide md:text-7xl">{p.word}</h3>
+                <h3 className={`font-display text-5xl uppercase tracking-wide transition-all duration-700 md:text-7xl ${active === i ? "" : "lg:text-4xl xl:text-5xl"}`}>{p.word}</h3>
                 <p className={`mt-3 max-w-sm font-display text-2xl italic text-ivory/85 transition-opacity duration-700 ${active === i ? "lg:opacity-100" : "lg:opacity-0"}`}>
                   {p.line}
                 </p>
@@ -442,7 +442,7 @@ function ResourcesBand() {
     ["Podcast", "Listen and watch on YouTube, Spotify and Apple Podcasts. Grow in your prayer life.", "/podcast"],
     ["Plant Prayer", "Start a prayer group in your home, workplace, school or church.", "/plant-prayer"],
     ["Prayer Map", "Find a prayer group near you anywhere across the Bay.", "/prayer-map"],
-  ];
+  ] as const;
   return (
     <section aria-labelledby="res-h" className="bg-sky">
       <div className="mx-auto max-w-[1600px] px-5 py-28 md:px-10">
@@ -473,7 +473,7 @@ function ServePartner() {
     ["Movement Partner", "Lead daily prayer with us and give to build a dwelling place for God.", "/movement-partners"],
     ["Missionaries", "Support prayer and worship missionaries serving regional prayer rooms.", "/missionaries"],
     ["Sow for Awakening", "Help establish the Pray The Bay headquarters and first 24/7 prayer room.", "/give"],
-  ];
+  ] as const;
   return (
     <section aria-labelledby="serve-h" className="bg-ivory">
       <div className="mx-auto grid max-w-[1600px] gap-16 px-5 py-28 md:px-10 lg:grid-cols-12">
