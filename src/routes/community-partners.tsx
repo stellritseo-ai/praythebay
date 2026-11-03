@@ -31,7 +31,7 @@ function Community() {
             ["Daily Online Prayer", "Pray with believers across the Bay every weekday.", org.onlinePrayer, "View Prayer Times"],
             ["Fast Wednesdays", "Set aside Wednesdays to fast and be in His presence with us.", org.instagram, "Join Us"],
             ["Plant Prayer", "Home, workplace, school, church, streets.", "/prayer-map", "View All Groups"],
-          ].map(([t, d, u, c], i) => (
+          ].map((x) => x as [string, string, string, string]).map(([t, d, u, c], i) => (
             <Reveal key={t} delay={i * 0.1}>
               <li className="border-t border-ink pt-8">
                 <span className="eyebrow text-muted-foreground">0{i + 1}</span>

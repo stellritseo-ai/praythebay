@@ -442,7 +442,7 @@ function ResourcesBand() {
     ["Podcast", "Listen and watch on YouTube, Spotify and Apple Podcasts. Grow in your prayer life.", "/podcast"],
     ["Plant Prayer", "Start a prayer group in your home, workplace, school or church.", "/plant-prayer"],
     ["Prayer Map", "Find a prayer group near you anywhere across the Bay.", "/prayer-map"],
-  ];
+  ] as const;
   return (
     <section aria-labelledby="res-h" className="bg-sky">
       <div className="mx-auto max-w-[1600px] px-5 py-28 md:px-10">
@@ -473,7 +473,7 @@ function ServePartner() {
     ["Movement Partner", "Lead daily prayer with us and give to build a dwelling place for God.", "/movement-partners"],
     ["Missionaries", "Support prayer and worship missionaries serving regional prayer rooms.", "/missionaries"],
     ["Sow for Awakening", "Help establish the Pray The Bay headquarters and first 24/7 prayer room.", "/give"],
-  ];
+  ] as const;
   return (
     <section aria-labelledby="serve-h" className="bg-ivory">
       <div className="mx-auto grid max-w-[1600px] gap-16 px-5 py-28 md:px-10 lg:grid-cols-12">
