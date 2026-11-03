@@ -33,7 +33,7 @@ function Resources() {
         intro="Every resource is free. Open a guide to read online or download the PDF."
         trail={[{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]}
       />
-      <Section tone="paper" className="!pt-0">
+      <Section tone="paper" className="[&>div]:!pt-0">
         <div className="sticky top-16 z-10 -mx-5 flex flex-col gap-4 border-b bg-paper/95 px-5 py-5 backdrop-blur md:-mx-10 md:flex-row md:items-center md:justify-between md:px-10">
           <div role="group" aria-label="Filter by category" className="flex flex-wrap gap-2">
             {cats.map((c) => (

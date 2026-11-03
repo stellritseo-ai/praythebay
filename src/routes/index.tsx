@@ -99,7 +99,7 @@ function Hero() {
           </div>
         </motion.div>
       </motion.div>
-      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-ivory/60" aria-hidden>
+      <div className="absolute bottom-6 left-1/2 hidden md:flex -translate-x-1/2 flex-col items-center gap-2 text-ivory/60" aria-hidden>
         <span className="eyebrow text-[0.6rem]">Scroll</span>
         <span className="relative h-10 w-px overflow-hidden bg-ivory/20">
           <span className="scroll-cue absolute inset-x-0 top-0 h-1/2 bg-ivory" />
