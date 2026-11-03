@@ -10,33 +10,284 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CommunityPartnersRouteImport } from './routes/community-partners'
+import { Route as DwellingPlaceRouteImport } from './routes/dwelling-place'
+import { Route as GiveRouteImport } from './routes/give'
+import { Route as MissionariesRouteImport } from './routes/missionaries'
+import { Route as MovementPartnersRouteImport } from './routes/movement-partners'
+import { Route as PlantPrayerRouteImport } from './routes/plant-prayer'
+import { Route as PodcastRouteImport } from './routes/podcast'
+import { Route as PrayWithUsRouteImport } from './routes/pray-with-us'
+import { Route as PrayerMapRouteImport } from './routes/prayer-map'
+import { Route as PrayingChurchesCohortRouteImport } from './routes/praying-churches-cohort'
+import { Route as Renaissance27RouteImport } from './routes/renaissance-27'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as SeekWeek2026RouteImport } from './routes/seek-week-2026'
+import { Route as ServeWithUsRouteImport } from './routes/serve-with-us'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TeamRouteImport } from './routes/team'
+import { Route as TheShiningOneRouteImport } from './routes/the-shining-one'
+import { Route as VisionRouteImport } from './routes/vision'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityPartnersRoute = CommunityPartnersRouteImport.update({
+  id: '/community-partners',
+  path: '/community-partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DwellingPlaceRoute = DwellingPlaceRouteImport.update({
+  id: '/dwelling-place',
+  path: '/dwelling-place',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiveRoute = GiveRouteImport.update({
+  id: '/give',
+  path: '/give',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissionariesRoute = MissionariesRouteImport.update({
+  id: '/missionaries',
+  path: '/missionaries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MovementPartnersRoute = MovementPartnersRouteImport.update({
+  id: '/movement-partners',
+  path: '/movement-partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlantPrayerRoute = PlantPrayerRouteImport.update({
+  id: '/plant-prayer',
+  path: '/plant-prayer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PodcastRoute = PodcastRouteImport.update({
+  id: '/podcast',
+  path: '/podcast',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrayWithUsRoute = PrayWithUsRouteImport.update({
+  id: '/pray-with-us',
+  path: '/pray-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrayerMapRoute = PrayerMapRouteImport.update({
+  id: '/prayer-map',
+  path: '/prayer-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrayingChurchesCohortRoute = PrayingChurchesCohortRouteImport.update({
+  id: '/praying-churches-cohort',
+  path: '/praying-churches-cohort',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Renaissance27Route = Renaissance27RouteImport.update({
+  id: '/renaissance-27',
+  path: '/renaissance-27',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeekWeek2026Route = SeekWeek2026RouteImport.update({
+  id: '/seek-week-2026',
+  path: '/seek-week-2026',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServeWithUsRoute = ServeWithUsRouteImport.update({
+  id: '/serve-with-us',
+  path: '/serve-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheShiningOneRoute = TheShiningOneRouteImport.update({
+  id: '/the-shining-one',
+  path: '/the-shining-one',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VisionRoute = VisionRouteImport.update({
+  id: '/vision',
+  path: '/vision',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/community-partners': typeof CommunityPartnersRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
+  '/give': typeof GiveRoute
+  '/missionaries': typeof MissionariesRoute
+  '/movement-partners': typeof MovementPartnersRoute
+  '/plant-prayer': typeof PlantPrayerRoute
+  '/podcast': typeof PodcastRoute
+  '/pray-with-us': typeof PrayWithUsRoute
+  '/prayer-map': typeof PrayerMapRoute
+  '/praying-churches-cohort': typeof PrayingChurchesCohortRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/resources': typeof ResourcesRoute
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
+  '/the-shining-one': typeof TheShiningOneRoute
+  '/vision': typeof VisionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/community-partners': typeof CommunityPartnersRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
+  '/give': typeof GiveRoute
+  '/missionaries': typeof MissionariesRoute
+  '/movement-partners': typeof MovementPartnersRoute
+  '/plant-prayer': typeof PlantPrayerRoute
+  '/podcast': typeof PodcastRoute
+  '/pray-with-us': typeof PrayWithUsRoute
+  '/prayer-map': typeof PrayerMapRoute
+  '/praying-churches-cohort': typeof PrayingChurchesCohortRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/resources': typeof ResourcesRoute
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
+  '/the-shining-one': typeof TheShiningOneRoute
+  '/vision': typeof VisionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/community-partners': typeof CommunityPartnersRoute
+  '/dwelling-place': typeof DwellingPlaceRoute
+  '/give': typeof GiveRoute
+  '/missionaries': typeof MissionariesRoute
+  '/movement-partners': typeof MovementPartnersRoute
+  '/plant-prayer': typeof PlantPrayerRoute
+  '/podcast': typeof PodcastRoute
+  '/pray-with-us': typeof PrayWithUsRoute
+  '/prayer-map': typeof PrayerMapRoute
+  '/praying-churches-cohort': typeof PrayingChurchesCohortRoute
+  '/renaissance-27': typeof Renaissance27Route
+  '/resources': typeof ResourcesRoute
+  '/seek-week-2026': typeof SeekWeek2026Route
+  '/serve-with-us': typeof ServeWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
+  '/the-shining-one': typeof TheShiningOneRoute
+  '/vision': typeof VisionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/community-partners'
+    | '/dwelling-place'
+    | '/give'
+    | '/missionaries'
+    | '/movement-partners'
+    | '/plant-prayer'
+    | '/podcast'
+    | '/pray-with-us'
+    | '/prayer-map'
+    | '/praying-churches-cohort'
+    | '/renaissance-27'
+    | '/resources'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/sitemap.xml'
+    | '/team'
+    | '/the-shining-one'
+    | '/vision'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/community-partners'
+    | '/dwelling-place'
+    | '/give'
+    | '/missionaries'
+    | '/movement-partners'
+    | '/plant-prayer'
+    | '/podcast'
+    | '/pray-with-us'
+    | '/prayer-map'
+    | '/praying-churches-cohort'
+    | '/renaissance-27'
+    | '/resources'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/sitemap.xml'
+    | '/team'
+    | '/the-shining-one'
+    | '/vision'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/community-partners'
+    | '/dwelling-place'
+    | '/give'
+    | '/missionaries'
+    | '/movement-partners'
+    | '/plant-prayer'
+    | '/podcast'
+    | '/pray-with-us'
+    | '/prayer-map'
+    | '/praying-churches-cohort'
+    | '/renaissance-27'
+    | '/resources'
+    | '/seek-week-2026'
+    | '/serve-with-us'
+    | '/sitemap.xml'
+    | '/team'
+    | '/the-shining-one'
+    | '/vision'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CommunityPartnersRoute: typeof CommunityPartnersRoute
+  DwellingPlaceRoute: typeof DwellingPlaceRoute
+  GiveRoute: typeof GiveRoute
+  MissionariesRoute: typeof MissionariesRoute
+  MovementPartnersRoute: typeof MovementPartnersRoute
+  PlantPrayerRoute: typeof PlantPrayerRoute
+  PodcastRoute: typeof PodcastRoute
+  PrayWithUsRoute: typeof PrayWithUsRoute
+  PrayerMapRoute: typeof PrayerMapRoute
+  PrayingChurchesCohortRoute: typeof PrayingChurchesCohortRoute
+  Renaissance27Route: typeof Renaissance27Route
+  ResourcesRoute: typeof ResourcesRoute
+  SeekWeek2026Route: typeof SeekWeek2026Route
+  ServeWithUsRoute: typeof ServeWithUsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TeamRoute: typeof TeamRoute
+  TheShiningOneRoute: typeof TheShiningOneRoute
+  VisionRoute: typeof VisionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +299,163 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community-partners': {
+      id: '/community-partners'
+      path: '/community-partners'
+      fullPath: '/community-partners'
+      preLoaderRoute: typeof CommunityPartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dwelling-place': {
+      id: '/dwelling-place'
+      path: '/dwelling-place'
+      fullPath: '/dwelling-place'
+      preLoaderRoute: typeof DwellingPlaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/give': {
+      id: '/give'
+      path: '/give'
+      fullPath: '/give'
+      preLoaderRoute: typeof GiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/missionaries': {
+      id: '/missionaries'
+      path: '/missionaries'
+      fullPath: '/missionaries'
+      preLoaderRoute: typeof MissionariesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/movement-partners': {
+      id: '/movement-partners'
+      path: '/movement-partners'
+      fullPath: '/movement-partners'
+      preLoaderRoute: typeof MovementPartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plant-prayer': {
+      id: '/plant-prayer'
+      path: '/plant-prayer'
+      fullPath: '/plant-prayer'
+      preLoaderRoute: typeof PlantPrayerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/podcast': {
+      id: '/podcast'
+      path: '/podcast'
+      fullPath: '/podcast'
+      preLoaderRoute: typeof PodcastRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pray-with-us': {
+      id: '/pray-with-us'
+      path: '/pray-with-us'
+      fullPath: '/pray-with-us'
+      preLoaderRoute: typeof PrayWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prayer-map': {
+      id: '/prayer-map'
+      path: '/prayer-map'
+      fullPath: '/prayer-map'
+      preLoaderRoute: typeof PrayerMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/praying-churches-cohort': {
+      id: '/praying-churches-cohort'
+      path: '/praying-churches-cohort'
+      fullPath: '/praying-churches-cohort'
+      preLoaderRoute: typeof PrayingChurchesCohortRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/renaissance-27': {
+      id: '/renaissance-27'
+      path: '/renaissance-27'
+      fullPath: '/renaissance-27'
+      preLoaderRoute: typeof Renaissance27RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seek-week-2026': {
+      id: '/seek-week-2026'
+      path: '/seek-week-2026'
+      fullPath: '/seek-week-2026'
+      preLoaderRoute: typeof SeekWeek2026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/serve-with-us': {
+      id: '/serve-with-us'
+      path: '/serve-with-us'
+      fullPath: '/serve-with-us'
+      preLoaderRoute: typeof ServeWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-shining-one': {
+      id: '/the-shining-one'
+      path: '/the-shining-one'
+      fullPath: '/the-shining-one'
+      preLoaderRoute: typeof TheShiningOneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vision': {
+      id: '/vision'
+      path: '/vision'
+      fullPath: '/vision'
+      preLoaderRoute: typeof VisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CommunityPartnersRoute: CommunityPartnersRoute,
+  DwellingPlaceRoute: DwellingPlaceRoute,
+  GiveRoute: GiveRoute,
+  MissionariesRoute: MissionariesRoute,
+  MovementPartnersRoute: MovementPartnersRoute,
+  PlantPrayerRoute: PlantPrayerRoute,
+  PodcastRoute: PodcastRoute,
+  PrayWithUsRoute: PrayWithUsRoute,
+  PrayerMapRoute: PrayerMapRoute,
+  PrayingChurchesCohortRoute: PrayingChurchesCohortRoute,
+  Renaissance27Route: Renaissance27Route,
+  ResourcesRoute: ResourcesRoute,
+  SeekWeek2026Route: SeekWeek2026Route,
+  ServeWithUsRoute: ServeWithUsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TeamRoute: TeamRoute,
+  TheShiningOneRoute: TheShiningOneRoute,
+  VisionRoute: VisionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
