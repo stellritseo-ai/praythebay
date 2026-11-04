@@ -44,7 +44,7 @@ const variants = {
   light: "bg-ivory text-ink hover:bg-sky",
   dark: "bg-ink text-ivory hover:bg-night hover:text-sky",
   sky: "bg-sky text-ink hover:bg-ivory",
-  outlineLight: "border border-ivory/50 text-ivory hover:bg-ivory hover:text-ink",
+  outlineLight: "border border-ivory/40 text-ivory backdrop-blur-xs hover:border-ivory hover:bg-ivory hover:text-ink",
   outlineDark: "border border-ink/40 text-ink hover:bg-ink hover:text-ivory",
   gold: "bg-gold text-ink hover:bg-ivory",
 } as const;
@@ -64,7 +64,7 @@ export function Cta({
   className?: string;
 }) {
   const cls = cn(
-    "group inline-flex items-center gap-3 px-7 py-4 eyebrow transition-colors duration-500",
+    "group inline-flex items-center gap-3 px-7 py-4 eyebrow transition-colors duration-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky",
     variants[variant],
     className,
   );
@@ -73,7 +73,7 @@ export function Cta({
   const inner = (
     <>
       <span>{children}</span>
-      <Icon className="size-3.5 transition-transform duration-500 group-hover:translate-x-1" />
+      <Icon aria-hidden="true" className="size-3.5 transition-transform duration-500 group-hover:translate-x-1" />
     </>
   );
   if (external) {
@@ -107,9 +107,9 @@ export function Photo({
     <img
       src={img(src, w)}
       srcSet={`${img(src, 750)} 750w, ${img(src, 1500)} 1500w, ${img(src, 2500)} 2500w`}
-      sizes="(max-width: 768px) 100vw, 60vw"
+      sizes={eager ? "100vw" : "(max-width: 768px) 100vw, 60vw"}
       alt={alt}
-      loading={eager ? "eager" : "lazy"}
+      {...(eager ? { fetchPriority: "high" as const } : { loading: "lazy" as const })}
       decoding="async"
       className={cn("h-full w-full object-cover", className)}
     />
@@ -122,12 +122,12 @@ export function Eyebrow({ children, className }: { children: ReactNode; classNam
 
 export function Breadcrumbs({ trail, light }: { trail: { name: string; path: string }[]; light?: boolean }) {
   return (
-    <nav aria-label="Breadcrumb" className={cn("eyebrow", light ? "text-ivory/60" : "text-muted-foreground")}>
-      <ol className="flex flex-wrap items-center gap-2">
+    <nav aria-label="Breadcrumb" className={cn("eyebrow text-[0.65rem]", light ? "text-ivory/60" : "text-muted-foreground")}>
+      <ol className="flex flex-wrap items-center gap-2.5">
         {trail.map((t, i) => (
-          <li key={t.path} className="flex items-center gap-2">
+          <li key={t.path} className="flex items-center gap-2.5">
             {i < trail.length - 1 ? (
-              <Link to={t.path} className="link-underline hover:opacity-100">
+              <Link to={t.path} className="link-underline transition-colors hover:text-sky">
                 {t.name}
               </Link>
             ) : (
@@ -135,7 +135,7 @@ export function Breadcrumbs({ trail, light }: { trail: { name: string; path: str
                 {t.name}
               </span>
             )}
-            {i < trail.length - 1 && <span aria-hidden>/</span>}
+            {i < trail.length - 1 && <span aria-hidden="true" className="opacity-40">/</span>}
           </li>
         ))}
       </ol>
@@ -150,7 +150,7 @@ export function Faq({ items, dark }: { items: { q: string; a: string }[]; dark?:
         <details key={f.q} className="group py-6">
           <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-display text-2xl leading-snug">
             <h3>{f.q}</h3>
-            <span className="mt-1 text-xl transition-transform duration-500 group-open:rotate-45" aria-hidden>
+            <span className="mt-1 text-xl transition-transform duration-500 group-open:rotate-45" aria-hidden="true">
               +
             </span>
           </summary>
